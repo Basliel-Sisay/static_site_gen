@@ -22,5 +22,7 @@ let changer = fs.readFileSync('input.md', 'utf-8');
     changer = changer.replace(/^---$/gim, '<hr>');
 
 const template = fs.readFileSync('template.html', 'utf-8');
+
 const finalTemplate = template.replace('{{content}}', changer);
+
 fs.writeFileSync('index.html', finalTemplate);
