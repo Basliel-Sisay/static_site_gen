@@ -33,12 +33,8 @@ function generate(){
     changer = changer.replace(/!\[(.*?)]\((.*?)\)/gim, '<img src="$2" alt="$1" style="max-width:100%; height:auto;">');//for images
 
     changer = changer.replace(/`([^`]+)`/gim, '<code>$1</code>');//for inline code
-
-    changer = changer.replace(/\n/gim, '<br>');//for new lines      
-
+    
     changer = changer.replace(/^\s*(\d+)\.\s+(.*$)/gim, '<li>$2</li>');//for ordered list items
-
-    changer = changer.replace(/^\s*\n/gim, '<br>');//for multiple new lines
 
     changer = changer.replace(/^\s*>\s*(.*$)/gim, '<blockquote>$1</blockquote>');//for blockquotes with leading spaces
 
